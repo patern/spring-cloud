@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ason.RedisService;
+import com.patern.RedisService;
 import com.patern.cache.CacheService;
 import com.patern.constant.ApiConstant;
 import com.patern.entity.rms.po.RmsUser;

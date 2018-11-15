@@ -11,7 +11,7 @@ eureka:
     eviction-interval-timer-in-ms: 30000   # 清理间隔（单位毫秒，默认是60*1000）
   # end
   instance:
-    hostname: ason-eureka-server
+    hostname: patern-eureka-server
     perferIpAddress: true
   client:
     register-with-eureka: false  # 当前服务不需要到Eureka Server上注册

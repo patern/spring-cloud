@@ -1,4 +1,4 @@
-package com.ason;
+package com.patern;
 
 import java.io.Serializable;
 import java.util.List;
@@ -15,7 +15,7 @@ import org.springframework.data.redis.core.ZSetOperations;
 import org.springframework.stereotype.Service;
 
 /**
- * Created by Ason on 2017-09-23.
+ * Created by patern on 2017-09-23.
  */
 @Service
 public class RedisService {

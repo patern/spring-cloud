@@ -1,4 +1,4 @@
-package com.ason.db.mongodb;
+package com.patern.db.mongodb;
 
 import com.xiaoleilu.hutool.util.StrUtil;
 import org.springframework.boot.context.properties.ConfigurationProperties;

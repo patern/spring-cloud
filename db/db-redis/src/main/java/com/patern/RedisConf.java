@@ -1,4 +1,4 @@
-package com.ason;
+package com.patern;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -13,7 +13,7 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 import redis.clients.jedis.JedisPoolConfig;
 
 /**
- * Created by Ason on 2017-09-23.
+ * Created by patern on 2017-09-23.
  */
 @Configuration
 public class RedisConf {

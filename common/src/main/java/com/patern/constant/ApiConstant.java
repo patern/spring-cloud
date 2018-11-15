@@ -2,7 +2,7 @@ package com.patern.constant;
 
 /**
  * 功能描述：定义主接口
- * Created by Ason on 2017/8/24.
+ * Created by patern on 2017/8/24.
  */
 public class ApiConstant {
     // =====================RMS begin====================

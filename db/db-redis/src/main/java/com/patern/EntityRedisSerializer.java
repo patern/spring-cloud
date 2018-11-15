@@ -1,11 +1,11 @@
-package com.ason;
+package com.patern;
 
 import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.data.redis.serializer.SerializationException;
 
 /**
  * 自定义Redis序列化
- * Created by Ason on 2017-09-23.
+ * Created by patern on 2017-09-23.
  */
 public class EntityRedisSerializer implements RedisSerializer<Object> {
     @Override

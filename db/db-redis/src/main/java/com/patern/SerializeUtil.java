@@ -1,4 +1,4 @@
-package com.ason;
+package com.patern;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -7,7 +7,7 @@ import java.io.ObjectOutputStream;
 
 /**
  * 定义序列化
- * Created by Ason on 2017-09-23.
+ * Created by patern on 2017-09-23.
  */
 public class SerializeUtil {
 

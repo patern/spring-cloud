@@ -4,7 +4,7 @@ eureka:
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:1111/eureka/
   instance:
-    hostname: ason-eureka-server
+    hostname: patern-eureka-server
     preferIpAddress: true
 
 # routes to serviceId

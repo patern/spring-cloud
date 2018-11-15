@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.cache.RedisCacheManager;
 import org.springframework.data.redis.core.RedisTemplate;
 
-import com.ason.RedisConf;
+import com.patern.RedisConf;
 
 /**
  * Created by patern on 2017/9/25.

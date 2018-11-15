@@ -1,4 +1,4 @@
-package com.ason.db.mongodb;
+package com.patern.db.mongodb;
 
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientOptions;
@@ -62,7 +62,7 @@ public class MongoSourceConf {
 
 
         MongoClient mongoClient = new MongoClient("127.0.0.1", myOptions);
-        MongoTemplate mongoTemplate = new MongoTemplate(new SimpleMongoDbFactory(mongoClient, "ason"));
+        MongoTemplate mongoTemplate = new MongoTemplate(new SimpleMongoDbFactory(mongoClient, "patern"));
 
     }
 

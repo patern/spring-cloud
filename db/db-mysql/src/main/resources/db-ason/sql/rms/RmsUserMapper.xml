@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.ason.db.mapper.rms.RmsUserMapper">
+<mapper namespace="com.patern.db.mapper.rms.RmsUserMapper">
 	<!-- 通用查询映射结果 -->
-	<resultMap id="BaseResultMap" type="com.ason.entity.rms.po.RmsUser">
+	<resultMap id="BaseResultMap" type="com.patern.entity.rms.po.RmsUser">
 		<id column="id" property="id" />
 		<result column="account" property="account" />
 		<result column="password" property="password" />
@@ -17,7 +17,7 @@
 		<result column="create_user_id" property="createUserId" />
 	</resultMap>
 
-	<select id="selectUserList" resultType="com.ason.entity.rms.vo.RmsUserVo">
+	<select id="selectUserList" resultType="com.patern.entity.rms.vo.RmsUserVo">
 		select
 		ru.id as id,
 		ru.account as account,
@@ -37,7 +37,7 @@
 		LEFT JOIN rms_user ru2 ON ru.create_user_id = ru2.id
 	</select>
 
-	<select id="selectOneUser" resultType="com.ason.entity.rms.vo.RmsUserVo">
+	<select id="selectOneUser" resultType="com.patern.entity.rms.vo.RmsUserVo">
 		select
 		ru.id as id,
 		ru.account as account,
