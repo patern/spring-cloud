@@ -1,4 +1,4 @@
-# ason-spring-cloud
+# 参考ason-spring-cloud --学习专用
 
 ## 项目简介
 * ason-spring-cloud是微服务springcloud脚手架，整合了 mybatis-plus，redis，shiro。
