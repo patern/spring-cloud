@@ -1,8 +1,8 @@
 # ====================basis.connection====================
 basis.connection:
-  url: jdbc:mysql://ason-hostname:3306/rms_db?useUnicode=true&characterEncoding=utf8
-  username: ason
-  password: ason
+  url: jdbc:mysql://localhost:3306/rms_db?useUnicode=true&characterEncoding=utf8
+  username: root 
+  password: root123
 
 
 # =======================basis.druid======================
@@ -46,9 +46,9 @@ basis.druid:
   #  防御sql注入的filter:wall
   filters: stat
   # 访问的用户名
-  loginUsername: ason
+  loginUsername: patern
   # 访问的密码
-  loginPassword: ason
+  loginPassword: 123123
 
 
 # ====================MybatisPlus====================
