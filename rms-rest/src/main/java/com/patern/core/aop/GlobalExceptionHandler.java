@@ -1,6 +1,6 @@
 package com.patern.core.aop;
 
-import com.patern.core.exception.RmsException;
+import com.patern.exception.RmsException;
 import com.patern.result.ResultBody;
 import com.xiaoleilu.hutool.log.Log;
 import com.xiaoleilu.hutool.log.LogFactory;

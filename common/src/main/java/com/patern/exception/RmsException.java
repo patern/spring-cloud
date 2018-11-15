@@ -1,4 +1,4 @@
-package com.patern.core.exception;
+package com.patern.exception;
 
 import com.patern.result.ResponseInfo;
 
