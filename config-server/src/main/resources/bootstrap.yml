@@ -2,6 +2,12 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:1111/eureka/
+      defaultZone: http://${eureka.instance.hostname}:1111/eureka/,http://${eureka.instance.hostname}:1112/eureka/
   instance:
     hostname: patern-eureka-server
+encrypt:
+  key-store:
+    location: config-server.keystore
+    alias: config-server
+    password: d321123
+    secret: d321123
