@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>userList</title>
+<link rel="stylesheet" th:href="@{/css/bootstrap.css}"></link>
+</head>
+<body class="container">
+	<br />
+	<h1>用户列表</h1>
+	<br />
+	<br />
+	<div class="with:80%">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>#</th>
+					<!-- 					<th>Id</th> -->
+					<th>User Name</th>
+					<th>Nick Name</th>
+					<th>Password</th>
+					<th>Sex</th>
+					<th>Age</th>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="user,iterStat : ${users}">
+					<td th:text="${iterStat.index+1}">1</td>
+					<!-- 					<th scope="row" th:text="${user.id}">1</th> -->
+					<td th:text="${user.userName}">--</td>
+					<td th:text="${user.nickName}">--</td>
+					<td th:text="${user.password}">--</td>
+					<td th:text="${user.userSex}">--</td>
+					<td th:text="${user.age}">--</td>
+					<td><a th:href="@{/toEdit(id=${user.id})}"> <span
+							class="glyphicon glyphicon-pencil"></span>
+					</a></td>
+					<td><a th:href="@{/delete(id=${user.id})}"> <span
+							class="glyphicon glyphicon-remove"></span>
+					</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="form-group" style="height: 25px">
+		<div class="col-sm-2 control-label">
+			<a href="/toAdd" th:href="@{/toAdd}" class="btn btn-info">add</a>
+		</div>
+	</div>
+	<div th:fragment="footer" class="center-block"
+		style="text-align: center">©2018上海久曳供应链管理公司</div>
+</body>
+</html>

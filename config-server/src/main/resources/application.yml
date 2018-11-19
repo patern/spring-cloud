@@ -5,12 +5,12 @@ spring:
   application:
     name: config-server
 #  profiles:
-#    active: dev    #开启本地配置 默认为git
+#    active: native    #开启本地配置 默认为git
 #  cloud:
 #    config:
 #      server:
 #        native:
-#          search-locations: ../patern-spring-cloud/config-server/config-repo
+#          search-locations: E:\\git\\patern-spring-cloud\\config-server\\config-repo
 # git管理配置
   cloud:
     config:

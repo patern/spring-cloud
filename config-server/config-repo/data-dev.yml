@@ -1,9 +1,8 @@
 # ====================basis.connection====================
 basis.connection:
   url: jdbc:mysql://localhost:3306/rms_db?useUnicode=true&characterEncoding=utf8
-  username: '{cipher}AQBgEO89eUHOA2ulhrQu0Se2X8bM9XS3YjywsTbUc1auAyXdCtGW/OAHyTeGNKfiMrXpJMrwFb1L5iX9tM6x0fd3IhADqUcwsx7JOp06H0kTKdSOCzScYhZy76bOW4uvtzfbdRVUkpREAkaizPXD4OULc20HKPXj8zwcsR0EyjBFeReIltcYplbp/6jb7FbGO7kHZMupJQzmcrAMsL/2NdHVZrEk00SymjqfzNF46kcIeDO59jZhiZvXa9KAW6rw0BIB2nqAyk0q2/vxzXXn5CU8a46+u5KRqiBmGtF+6Dmc7vN0huugZ8sn2gmlB7z+iszZvS+A/6GHLoU7AFAPFdjhhiW6dLCdOHSASzM4Eg1/uaWLbrEEwL9dHO1gxFyHMuM=' 
-  password: '{cipher}AQB0VFpjLFdN+oCGUIyT5kBj1TqUMWun2sg08Js7tuFAAz6xUxnj08yYUo8pE/6M7VvFjX5E+xqt7i2rj7SOjDgJrxLUqJB5vLWXlPTwQp7KEXlppXoXbmjVAMYiVo4bt+sKig1kPS6l12fCXiAlBtEIrOOCcdTlDO+MNcYHKa8LdP0ECEuN8Fv381fojPoIWj5f9YazDZZbtsVaDfR42N1UjFNUbZ1ySwGXs72dba2IcYZKrTdfMfEaPKZQ2EL5kArAaMFZ7X9X4n6rTsDkmU0fV0J3WM2WwSIgwCQMPUt5EUD0iwt7e3bzlymQOwa5QDP2JAuRYmST5OvTuZhtIPhiir7gzF4hpHWhgjZGZ6X33+PBbPwguiYQNPoRLmB9W/0='
-
+  username: root
+  password: root123
 
 # =======================basis.druid======================
 basis.druid:
@@ -71,11 +70,11 @@ mybatisPlus:
 # ====================redis====================
 redis:
   # Redis服务器地址
-  host: patern-hostname
+  host: 192.168.0.58
   # Redis服务器连接端口
   port: 6379
   # Redis服务器连接密码（默认为空）
-  password:
+  password: Jy123456
   # 连接超时时间（毫秒）
   timeout: 0
   # Redis数据库索引（默认为0）

@@ -3,5 +3,5 @@ server:
 spring:
   application:
     name: rms-service
-
-
+  thymeleaf:
+    cache: false

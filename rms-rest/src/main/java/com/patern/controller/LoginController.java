@@ -23,6 +23,14 @@ public class LoginController {
      * 登录页面
      * @return
      */
+    @GetMapping(value = "/")
+    public String root() {
+        return "redirect:/login";
+    }
+    /**
+     * 登录页面
+     * @return
+     */
     @GetMapping(value = "/login")
     public String login() {
         return "进入登录页面";
