@@ -83,6 +83,7 @@ public class RedisConf {
         jedisConnectionFactory.setHostName(this.host);
         jedisConnectionFactory.setPort(this.port);
         jedisConnectionFactory.setDatabase(this.database);
+        jedisConnectionFactory.setPassword(this.password);
         return jedisConnectionFactory;
     }
 

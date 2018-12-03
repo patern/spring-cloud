@@ -5,3 +5,13 @@ spring:
     name: rms-service
   thymeleaf:
     cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+  resources:
+    chain:
+      strategy:
+        content:
+          enabled: true
+          paths: /** 

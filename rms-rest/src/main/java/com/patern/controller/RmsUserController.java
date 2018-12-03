@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.patern.RedisService;
 import com.patern.cache.CacheService;
@@ -49,7 +50,7 @@ public class RmsUserController {
     /**
      * 添加用户
      */
-    @PostMapping(value = "", produces = "application/json;charset=UTF-8")
+    @PostMapping(value = "/user/add", produces = "application/json;charset=UTF-8")
     @RequiresPermissions("user:add")
     public String addUser(@Valid RmsUser rmsUser, BindingResult bindingResult) throws Exception {
         if (bindingResult.hasErrors()) {
@@ -62,12 +63,16 @@ public class RmsUserController {
     /**
      * 获取用户列表
      */
-    @GetMapping(value = "", produces = "application/json;charset=UTF-8")
+    @GetMapping(value = "/user/list", produces = "application/json;charset=UTF-8")
     @RequiresPermissions("user:list")
-    public String findAllUser(
+    public ModelAndView findAllUser(
             @RequestParam(value = "showCount", required = false, defaultValue = "10") Integer showCount,
             @RequestParam(value = "currentPage", required = false, defaultValue = "1") Integer currentPage) throws Exception {
-        return ResultBody.success(rmsUserService.selectUserList(currentPage, showCount));
+      
+    	ModelAndView mv = new ModelAndView("/user/list");
+    	mv.addObject("users",rmsUserService.selectUserList(currentPage, showCount));
+    	return mv;
+//    	return ResultBody.success(rmsUserService.selectUserList(currentPage, showCount));
     }
 
     /**

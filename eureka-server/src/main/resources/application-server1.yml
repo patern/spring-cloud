@@ -17,6 +17,6 @@ eureka:
 #    register-with-eureka: true  # 当前服务不需要到Eureka Server上注册
 #    fetch-registry: true  # 不需要从eureka服务器获取注册信息
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:1112/eureka/   # Eureka客户端设置Eureka Server的地址
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/   # Eureka客户端设置Eureka Server的地址
 
 

@@ -1,6 +1,5 @@
 package com.patern.service;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -17,13 +16,11 @@ import com.patern.cache.CacheService;
 import com.patern.db.mapper.rms.RmsUserMapper;
 import com.patern.entity.rms.po.RmsUser;
 import com.patern.entity.rms.vo.RmsUserVo;
-import com.patern.enums.RmsUserSexEnum;
 import com.patern.enums.RmsUserStatusEnum;
 import com.patern.exception.RmsException;
 import com.patern.exception.RmsExceptionEnum;
 import com.patern.utils.BlankUtil;
 import com.patern.utils.TimeUtil;
-import com.xiaoleilu.hutool.date.DatePattern;
 import com.xiaoleilu.hutool.log.Log;
 import com.xiaoleilu.hutool.log.LogFactory;
 
@@ -50,25 +47,25 @@ public class RmsUserService extends ServiceImpl<RmsUserMapper, RmsUser> {
     /**
      * 查询用户信息
      */
-    public Page<Map<String, Object>> selectUserList(Integer currentPage, Integer showCount) {
-        Page<Map<String, Object>> page = new Page<>(currentPage, showCount);
-        List<Map<String, Object>> rmsUserList = new ArrayList<>();
-        for (RmsUserVo rmsUserVo : rmsUserMapper.selectUserList(page)) {
-            Map<String, Object> ruv = new HashMap(16);
-            ruv.put("id", rmsUserVo.getId());
-            ruv.put("name", rmsUserVo.getName());
-            ruv.put("account", rmsUserVo.getAccount());
-            ruv.put("password", rmsUserVo.getPassword());
-            ruv.put("phone", rmsUserVo.getPhone());
-            ruv.put("birthday", rmsUserVo.getBirthday());
-            ruv.put("sex", RmsUserSexEnum.getByStatus(rmsUserVo.getSex()).getRemark());
-            ruv.put("status", RmsUserStatusEnum.getByStatus(rmsUserVo.getStatus()).getRemark());
-            ruv.put("createTime", TimeUtil.getDateByTimestamp(rmsUserVo.getCreateTime(), DatePattern.NORM_DATETIME_PATTERN));
-            ruv.put("createUserName", rmsUserVo.getCreateUserName());
-            ruv.put("deptName", rmsUserVo.getDeptName());
-            ruv.put("roleName", rmsUserVo.getRoleName());
-            rmsUserList.add(ruv);
-        }
+    public Page<RmsUserVo> selectUserList(Integer currentPage, Integer showCount) {
+        Page<RmsUserVo> page = new Page<>(currentPage, showCount);
+        List<RmsUserVo> rmsUserList = rmsUserMapper.selectUserList(page);
+//        for (RmsUserVo rmsUserVo : rmsUserMapper.selectUserList(page)) {
+//            Map<String, Object> ruv = new HashMap<String, Object>(16);
+//            ruv.put("id", rmsUserVo.getId());
+//            ruv.put("name", rmsUserVo.getName());
+//            ruv.put("account", rmsUserVo.getAccount());
+//            ruv.put("password", rmsUserVo.getPassword());
+//            ruv.put("phone", rmsUserVo.getPhone());
+//            ruv.put("birthday", rmsUserVo.getBirthday());
+//            ruv.put("sex", RmsUserSexEnum.getByStatus(rmsUserVo.getSex()).getRemark());
+//            ruv.put("status", RmsUserStatusEnum.getByStatus(rmsUserVo.getStatus()).getRemark());
+//            ruv.put("createTime", TimeUtil.getDateByTimestamp(rmsUserVo.getCreateTime(), DatePattern.NORM_DATETIME_PATTERN));
+//            ruv.put("createUserName", rmsUserVo.getCreateUserName());
+//            ruv.put("deptName", rmsUserVo.getDeptName());
+//            ruv.put("roleName", rmsUserVo.getRoleName());
+//            rmsUserList.add(ruv);
+//        }
         page.setRecords(rmsUserList);
         return page;
 
