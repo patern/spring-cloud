@@ -15,7 +15,7 @@ import redis.clients.jedis.JedisPoolConfig;
 /**
  * Created by patern on 2017-09-23.
  */
-@Configuration
+//@Configuration
 public class RedisConf {
     private static final Log log = LogFactory.getLog(RedisConf.class);
 

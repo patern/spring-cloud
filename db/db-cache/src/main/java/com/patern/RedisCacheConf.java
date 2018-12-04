@@ -20,7 +20,7 @@ import com.patern.RedisConf;
  * Created by patern on 2017/9/25.
  * 这里实现CachingConfigurerSupport主要是方便使用自定义keyGenerator
  */
-@Configuration
+//@Configuration
 // 启用缓存
 @EnableCaching
 public class RedisCacheConf  extends CachingConfigurerSupport {
@@ -37,7 +37,7 @@ public class RedisCacheConf  extends CachingConfigurerSupport {
     @Override
     public CacheManager cacheManager() {
         log.info("初始化CacheManager");
-        RedisCacheManager cacheManager = new RedisCacheManager(redisTemplate);
+        RedisCacheManager cacheManager = new RedisCacheManager(null, null);
 //        Map<String, Long> expires = new HashMap<>();
 //        expires.put("cache:user", 36000L);
 //        cacheManager.setExpires(expires);

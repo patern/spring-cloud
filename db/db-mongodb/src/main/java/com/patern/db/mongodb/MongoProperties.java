@@ -1,17 +1,24 @@
 package com.patern.db.mongodb;
 
 import com.xiaoleilu.hutool.util.StrUtil;
+
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
-@ConfigurationProperties(prefix = "mongo.connection")
+//@Configuration
+@ConfigurationProperties(prefix = "spring.data.mongodb")
 public class MongoProperties {
-
+	
+	@Value("${host}")
     private String host;
+	@Value("${port}")
     private Integer port;
+	@Value("${userName}")
     private String userName;
+	@Value("${password}")
     private String password;
+	@Value("${dbName}")
     private String dbName;
 
     public String getHost() {

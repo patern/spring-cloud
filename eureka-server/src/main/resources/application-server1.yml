@@ -19,4 +19,7 @@ eureka:
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:1112/eureka/,http://${eureka.instance.hostname}:1113/eureka/   # Eureka客户端设置Eureka Server的地址
 
-
+logging:
+#  config: classpath:logback/logback-${spring.profiles.active}.xml
+  path: logs/
+  file: eureka-server-1.log
